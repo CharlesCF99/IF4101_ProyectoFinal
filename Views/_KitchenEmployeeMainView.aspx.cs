@@ -12,13 +12,15 @@ namespace IF4101_ProyectoFinal.Views
     {
         public List<string> activeOrders = new List<string> { };
         int dbID = -1;
-        ManageOrders aOrders = new ManageOrders();
+        Controls.ManageOrders aOrders = new Controls.ManageOrders();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["OrderCompleted"] == null)
             {
                 activeOrders = aOrders.GetActiveOrdersList();
-            } else {
+            }
+            else
+            {
                 IDConverter idConverter = new IDConverter();
                 dbID = idConverter.convertRowIDToDbID(activeOrders, (int)Session["OrderCompleted"]);
                 aOrders.setOrderAsDelivered(dbID);
@@ -28,7 +30,8 @@ namespace IF4101_ProyectoFinal.Views
 
         protected void UndoButton_Click(object sender, EventArgs e)
         {
-            if (dbID != 1) {
+            if (dbID != 1)
+            {
                 aOrders.setOrderAsNoDelivered(dbID);
                 Response.Redirect("../Views/_KitchenEmployeeMainView.aspx");
             }

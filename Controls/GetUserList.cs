@@ -19,7 +19,6 @@ namespace IF4101_ProyectoFinal.Controls
             string type = "";
             var data = new List<string>();
 
-            string prueba = "borrar esto igual";
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionDB"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
 

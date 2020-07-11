@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Windows.Forms;
 
 namespace IF4101_ProyectoFinal.Controls
 {
@@ -49,7 +46,8 @@ namespace IF4101_ProyectoFinal.Controls
                     nameHolder = item.Split('|')[1].ToString();
                     orderDescriptionHolder += item.Split('|')[2].ToString() + ". ";
                 }
-                else {
+                else
+                {
                     depuratedData.Add(idHolder + "|" + nameHolder + "|" + orderDescriptionHolder);
                     orderDescriptionHolder = "";
                     lastIndex++;
@@ -62,7 +60,7 @@ namespace IF4101_ProyectoFinal.Controls
             return depuratedData;
         }
 
-        public void setOrderAsDelivered(int orderID) 
+        public void setOrderAsDelivered(int orderID)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionDB"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);

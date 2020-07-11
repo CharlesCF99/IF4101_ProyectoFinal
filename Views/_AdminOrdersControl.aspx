@@ -1,4 +1,4 @@
-﻿<%@ page title="" language="C#" masterpagefile="~/Site.Master" autoeventwireup="true" codebehind="_AdminOrdersControl.aspx.cs" inherits="IF4101_ProyectoFinal.Views._AdminOrdersControl" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="_AdminOrdersControl.aspx.cs" Inherits="IF4101_ProyectoFinal.Views._AdminOrdersControl" %>
 
 <asp:Content ID="GeneralNavBar" ContentPlaceHolderID="NavBar" runat="server">
     <div class="row navbar navbar-inverse navbar-static-top">

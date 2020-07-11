@@ -28,11 +28,11 @@ namespace IF4101_ProyectoFinal.Controls
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
-            { 
+            {
                 ID = int.Parse(reader["PlateID"].ToString());
                 name = reader["PlateName"].ToString();
                 price = int.Parse(reader["PlatePrice"].ToString());
-                data.Add(ID+"|"+ name+"|"+ price+"|");
+                data.Add(ID + "|" + name + "|" + price + "|");
             }
             connection.Close();
             return data;

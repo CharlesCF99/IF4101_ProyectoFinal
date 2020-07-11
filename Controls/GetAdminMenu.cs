@@ -12,6 +12,7 @@ namespace IF4101_ProyectoFinal.Controls
     {
         public List<string> GetAdminsMenu()
         {
+            String test = "aija";
             int ID = 0;
             string name = "";
             string description = "";

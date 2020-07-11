@@ -18,6 +18,8 @@ namespace IF4101_ProyectoFinal.Controls
             string name = "";
             var data = new List<string>();
 
+
+            string test = "hay que borrar esto";
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionDB"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
 

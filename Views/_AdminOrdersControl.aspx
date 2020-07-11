@@ -41,6 +41,8 @@
     </script>
     <div class="container-bg col-md-8 col-md-offset-2">
         <h1 align="justify">Menú de pedidos</h1>
+        <h2 align="justify">¿Desea filtrar los resultados?</h2>
+        <p align="justify">&nbsp;</p>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <table class="table table-hover">

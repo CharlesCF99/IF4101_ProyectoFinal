@@ -29,4 +29,36 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div align="justify">
+                    <h4>Ingrese el nombre del plato<font color="red">*</font></h4>
+                    <asp:TextBox ID="NamePlate" runat="server" Width="200px" placeholder="Ej: Arroz con Camarones"></asp:TextBox>
+     </div>
+
+     <div align="justify">
+                    <h4>Ingrese la descripcion del plato<font color="red">*</font></h4>
+                    <asp:TextBox ID="DescPlate" runat="server" Width="200px" placeholder="Ej: Describir el plato como tal"></asp:TextBox>
+     </div>
+
+    <div align="justify">
+                    <h4>Ingrese el precio del plato<font color="red">*</font></h4>
+                    <asp:TextBox ID="PricePlate" runat="server" Width="200px" placeholder="Ej: 2000"></asp:TextBox>
+     </div>
+
+
+     <div align="justify">
+                    <h4>Ingrese el estatus del plato<font color="red">*</font></h4>
+                    <asp:TextBox ID="Status" runat="server" Width="200px" placeholder="Ej: 1"></asp:TextBox>
+     </div>
+
+    <div align="justify">
+                    <h4>Foto de la vara <font color="red">*</font></h4>
+                    <asp:TextBox ID="Photo" runat="server" Width="200px" placeholder="Ej: xvxv"></asp:TextBox>
+     </div>
+
+     <div classname="row">
+           
+            <asp:Button ID="Add" runat="server" Text="Agregar" OnClick="Add_Click"/>
+      </div>
+
 </asp:Content>

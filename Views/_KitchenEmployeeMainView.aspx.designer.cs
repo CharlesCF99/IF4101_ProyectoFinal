@@ -13,5 +13,23 @@ namespace IF4101_ProyectoFinal.Views
 
     public partial class _KitchenEmployeeMainView
     {
+
+        /// <summary>
+        /// Control submitButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitButton;
+
+        /// <summary>
+        /// Control UndoButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UndoButton;
     }
 }

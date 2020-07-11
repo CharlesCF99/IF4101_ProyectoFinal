@@ -38,8 +38,8 @@ namespace IF4101_ProyectoFinal.Views
                 if (userData.Item6 == 1)
                 {
                     Response.Redirect("../Views/_AdminMainView.aspx");
-                } else if (userData.Item6 == 1) {
-                    Response.Redirect("../Views/_KitchenMainView.aspx");
+                } else if (userData.Item6 == 2) {
+                    Response.Redirect("../Views/_KitchenEmployeeMainView.aspx");
                 } else
                 {
                     Response.Redirect("../Views/_UserMainView.aspx");

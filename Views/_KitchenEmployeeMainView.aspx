@@ -19,6 +19,15 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <script type="text/javascript">
+        function rowEvent(x) {
+            //alert("Page is loaded" + x.rowIndex);
+            var row = x.rowIndex;
+    '<%Session["OrderCompleted"] = "' + row + '"; %>';
+            alert('<%=Session["OrderCompleted"] %>');
+            location.href = "../Views/_KitchenEmployeeMainView";
+        }
+    </script>
     <div class="container-bg col-md-8 col-md-offset-2">
         <h1 align="justify">Lista de ordenes</h1>
         <div class="row">
@@ -31,20 +40,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Mark</td>
-                            <td>1000</td>
+                        <%foreach (var item in activeOrders)
+                            {%>
+                        <tr class="pointer" onclick="rowEvent(this)">
+                            <td><%=item.Split('|')[1].ToString() %></td>
+                            <td><%=item.Split('|')[2].ToString() %></td>
+                            <td>
+                                <%--<button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>--%>
+                                <asp:Button ID="submitButton" runat="server" Text="Entregado" class="btn btn-danger" />
+                                <%--<asp:Button ID="Button1" runat="server" Text="Entregado" OnClick="Submit_Click" class="btn btn-danger"/>--%>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Fred</td>
-                            <td>2000</td>
-                        </tr>
-                        <%--{userListVisual}--%>
+                        <%}%>
                     </tbody>
                 </table>
+                <asp:Button ID="UndoButton" runat="server" Text="Deshacer" OnClick="UndoButton_Click" class="btn"/>
             </div>
         </div>
-        <div classname="row">
+        <div class="row">
             <h4></h4>
             <%--<asp:Button ID="submitButton" runat="server" Text="Ingresar &raquo;" OnClick="Submit_Click" />--%>
         </div>

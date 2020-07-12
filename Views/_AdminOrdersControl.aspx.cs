@@ -12,9 +12,11 @@ namespace IF4101_ProyectoFinal.Views
         public List<string> menu = new List<string> { };
         protected void Page_Load(object sender, EventArgs e)
         {
+            ClientList.Items.Insert(0, new ListItem("--Select--", "0"));
+
             String temp = "";
 
-            if (Session.IsNewSession)
+            if (Session["client"] == "")
             {
                 Session["client"] = "";
                 Session["initialDate"] = "";
@@ -41,11 +43,11 @@ namespace IF4101_ProyectoFinal.Views
             {
                 if (StatesList.Items[i].Selected == true)
                 {
-                    orderStates += StatesList.Items[i].Text.Replace(" ", "") + "|";
+                    orderStates += StatesList.Items[i].Text + "|";
                 }
             }
 
-            Session["client"] = "$1_" + ClientList.Text;
+            Session["client"] = "$1_" + ClientList.SelectedIndex;
             Session["initialDate"] = "$2_" + InitialDate.Text;
             Session["endDate"] = "$3_" + EndDate.Text;
             Session["orderStates"] = "$4_" + orderStates;

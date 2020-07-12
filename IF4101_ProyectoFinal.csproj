@@ -531,7 +531,6 @@
     <Compile Include="Controls\GetOrderList.cs" />
     <Compile Include="Controls\GetPlate.cs" />
     <Compile Include="Controls\GetUserList.cs" />
-    <Compile Include="Controls\IDConverter.cs" />
     <Compile Include="Controls\ManageOrders.cs" />
     <Compile Include="Controls\ModifyUserControl.cs" />
     <Compile Include="Controls\SignUpControl.cs" />

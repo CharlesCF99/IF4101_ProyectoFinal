@@ -494,6 +494,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\SignUp.aspx" />
+    <Content Include="Views\_ModifyUserView.aspx" />
     <Content Include="Views\_AdminEditPlateView.aspx" />
     <Content Include="Views\_AdminMainView.aspx" />
     <Content Include="Views\_AdminOrdersControl.aspx" />
@@ -503,7 +504,6 @@
     <Content Include="Views\_KitchenEmployeeMainView.aspx" />
     <Content Include="Views\_LogOut.aspx" />
     <Content Include="Views\_UserMainView.aspx" />
-    <Content Include="Views\_UserModifyView.aspx" />
     <Content Include="Views\_UserOrderView.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -525,6 +525,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ModifyUserControl.cs" />
     <Compile Include="Controls\Encryption.cs" />
     <Compile Include="Controls\GetAdminMenu.cs" />
     <Compile Include="Controls\GetClientMenu.cs" />
@@ -532,7 +533,6 @@
     <Compile Include="Controls\GetPlate.cs" />
     <Compile Include="Controls\GetUserList.cs" />
     <Compile Include="Controls\ManageOrders.cs" />
-    <Compile Include="Controls\ModifyUserControl.cs" />
     <Compile Include="Controls\SignUpControl.cs" />
     <Compile Include="Controls\LoginControl.cs" />
     <Compile Include="Default.aspx.cs">
@@ -574,6 +574,13 @@
     </Compile>
     <Compile Include="Views\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_ModifyUserView.aspx.cs">
+      <DependentUpon>_ModifyUserView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\_ModifyUserView.aspx.designer.cs">
+      <DependentUpon>_ModifyUserView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\_AdminEditPlateView.aspx.cs">
       <DependentUpon>_AdminEditPlateView.aspx</DependentUpon>
@@ -637,12 +644,6 @@
     </Compile>
     <Compile Include="Views\_UserMainView.aspx.designer.cs">
       <DependentUpon>_UserMainView.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\_UserModifyView.aspx.cs">
-      <DependentUpon>_UserModifyView.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\_UserModifyView.aspx.designer.cs">
-      <DependentUpon>_UserModifyView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\_UserOrderView.aspx.cs">
       <DependentUpon>_UserOrderView.aspx</DependentUpon>

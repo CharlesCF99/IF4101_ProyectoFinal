@@ -4,16 +4,15 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Net;
+using System.Web;
 
 namespace IF4101_ProyectoFinal.Controls
 {
     public class ModifyUserControl
     {
-
         Encryption encrypt = new Encryption();
 
-        public Boolean checkPasswordEquality(String firstPassword, String secondPassword)
+        public Boolean checkPasswordEquality(string firstPassword, string secondPassword)
         {
             return firstPassword.Equals(secondPassword);
         }
@@ -33,5 +32,6 @@ namespace IF4101_ProyectoFinal.Controls
                 connection.Close();
             }
         }
+
     }
 }

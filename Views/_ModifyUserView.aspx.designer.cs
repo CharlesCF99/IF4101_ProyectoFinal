@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace IF4101_ProyectoFinal
+namespace IF4101_ProyectoFinal.Views
 {
 
 
-    public partial class _UserModifyView
+    public partial class _ModifyUserView
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace IF4101_ProyectoFinal
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
-        /// Control adress.
+        /// Control address.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox adress;
+        protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
         /// Control firstPassword.

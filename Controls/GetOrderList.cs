@@ -44,7 +44,6 @@ namespace IF4101_ProyectoFinal.Controls
             {
                 String[] tempString = filterSettings.Split('$');
                 Boolean flag1 = false;
-                Boolean flag2 = false;
 
                 if (tempString[1] != "1")
                 {
@@ -71,7 +70,6 @@ namespace IF4101_ProyectoFinal.Controls
                             if (initialDate <= tempDate && tempDate <= endDate)
                             {
                                 tempList2.Add(item);
-                                flag2 = true;
                             }
                         }
                     }

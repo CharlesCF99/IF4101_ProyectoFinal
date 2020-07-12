@@ -31,8 +31,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <%foreach (var item in activeOrders)
-                            {%>
+                        <%  int contador = 0;
+                            foreach (var item in activeOrders)
+                            {
+
+                                if (contador < 6)
+                                {%>
                         <tr class="pointer">
                             <td><%=item.Split('|')[1].ToString() %></td>
                             <td><%=item.Split('|')[2].ToString() %></td>
@@ -40,9 +44,19 @@
                                 <a href="../Views/_KitchenEmployeeMainView?id=<%=item.Split('|')[0].ToString() %>">Entregado</a>
                             </td>
                         </tr>
-                        <%}%>
+                        <% contador++;
+                                }
+                            }%>
                     </tbody>
                 </table>
+                <% if (ordenesOcultas != 0)
+                    { %>
+                <div class="col mt-4">
+                    <div>
+                        Hay <%= ordenesOcultas %> ordenes más
+                    </div>
+                </div>
+                <% } %>
                 <asp:Button ID="UndoButton" runat="server" Text="Deshacer" OnClick="UndoButton_Click" class="btn btn-danger" />
             </div>
         </div>

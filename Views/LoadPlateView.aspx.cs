@@ -64,9 +64,17 @@ namespace IF4101_ProyectoFinal.Views
             plate.PlatePhoto1 = getImage();
             plate.PlateName1 = plateName.Text;
             plate.PlateDescription1 = plateDescription.Text;
-            plate.PlateStatus1 = plateStatus.Text;
+
+            if (plateStatus.SelectedValue == "Sí")
+            {
+                plate.PlateStatus1 = true;
+            }
+            else if (plateStatus.SelectedValue == "No")
+            {
+                plate.PlateStatus1 = false;
+            }
+
             DAPlate.addPlate(plate);
         }
-
     }
 }

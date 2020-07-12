@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoadPlateView.aspx.cs" Inherits="IF4101_ProyectoFinal.Views.LoadPlateView" %>
+
 <asp:Content ID="GeneralNavBar" ContentPlaceHolderID="NavBar" runat="server">
-        <div class="row navbar navbar-inverse navbar-static-top">
+    <div class="row navbar navbar-inverse navbar-static-top">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
@@ -29,7 +30,7 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="container-bg col-md-8 col-md-offset-2 border">
+    <div class="container-bg col-md-8 col-md-offset-2 border">
         <h1 align="justify">Añadir plato</h1>
         <div classname="row">
             <div classname="col-md-4">
@@ -47,10 +48,18 @@
             <div classname="col-md-4">
                 <div align="justify">
                     <h4>Indique la disponibilidad del plato<font color="red">*</font></h4>
-                    <asp:TextBox ID="plateStatus" runat="server" Width="200px" placeholder="Ej: true o false"></asp:TextBox>
+                </div>
+                <div align="justify">
+                    <p>
+                        <asp:RadioButtonList ID="plateStatus" runat="server">
+                            <asp:ListItem>No</asp:ListItem>
+                            <asp:ListItem>Sí</asp:ListItem>
+                        </asp:RadioButtonList>
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
     <img id="imgpreview" src="" class=" w-50 mt-4  p-2" style="border-width: 0px; visibility: hidden;" />
     <asp:Image ID="imagePlate" runat="server" />
     <asp:Button ID="addButton" runat="server" Text="Añadir" OnClick="Add_Click" />

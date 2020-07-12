@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
                 <li><a runat="server" href="~/Views/_UserMainView">Menú principal</a></li>
                 <li><a runat="server" href="~/Views/_UserOrderView">Revisar pedido</a></li>
-                <li><a runat="server" href="~/Views/_UserModifyView">Datos personales</a></li>
+                <li><a runat="server" href="~/Views/_ModifyUserView">Administrar datos personales</a></li>
                 <li><a runat="server" href="~/Views/_LogOut">Salir</a></li>
             </ul>
         </div>

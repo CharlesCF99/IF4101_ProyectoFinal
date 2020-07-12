@@ -11,61 +11,52 @@ namespace IF4101_ProyectoFinal.Views
 {
 
 
-    public partial class _AdminEditPlateView
+    public partial class _ModifyUserView
     {
 
         /// <summary>
-        /// Control NamePlate.
+        /// Control name.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NamePlate;
+        protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
-        /// Control DescPlate.
+        /// Control address.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DescPlate;
+        protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
-        /// Control PricePlate.
+        /// Control firstPassword.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PricePlate;
+        protected global::System.Web.UI.WebControls.TextBox firstPassword;
 
         /// <summary>
-        /// Control Status.
+        /// Control secondPassword.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Status;
+        protected global::System.Web.UI.WebControls.TextBox secondPassword;
 
         /// <summary>
-        /// Control Photo.
+        /// Control submitButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Photo;
-
-        /// <summary>
-        /// Control Add.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Add;
+        protected global::System.Web.UI.WebControls.Button submitButton;
     }
 }

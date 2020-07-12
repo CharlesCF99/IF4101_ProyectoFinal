@@ -23,15 +23,6 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <script type="text/javascript">
-        function rowEvent(x) {
-            alert("Page is loaded" + x.rowIndex);
-            location.href = "../Views/_KitchenEmployeeMainView";
-
-        }
-    </script>
-
     <div class="container-bg col-md-8 col-md-offset-2">
         <h1 align="justify">Menu principal</h1>
         <div class="row">
@@ -57,27 +48,12 @@
                             </td>
                         </tr>
                         <%}%>
-                        <%--                        <script type="text/javascript">
-                            function createRows() {
-
-                               menu.
-
-                                for (var i = 0; i < 5; i++) {
-                                
-                                    alert("Page is loaded");
-                               
-                                }
-                                
-                            }
-                            window.onload = createRows;
-                        </script>--%>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row">
             <h4></h4>
-            <%--<asp:Button ID="submitButton" runat="server" Text="Ingresar &raquo;" OnClick="Submit_Click" />--%>
         </div>
     </div>
 </asp:Content>

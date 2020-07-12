@@ -29,7 +29,5 @@
         <p class="lead">Maria Ramirez Hernandes - B65716</p>
         <p class="lead">Carlos Cabezas Fallas - B71356</p>
         <p class="lead">Jonathan Orozco Perez - B65152</p>
-    </div>
-
-   
+    </div>   
 </asp:Content>

@@ -34,22 +34,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Mark</td>
-                            <td>1000</td>
+                       <tr>
                         </tr>
-                        <tr>
-                            <td>Fred</td>
-                            <td>2000</td>
-                        </tr>
-                        <%--{userListVisual}--%>
                     </tbody>
                 </table>
             </div>
         </div>
         <div classname="row">
             <h4></h4>
-            <%--<asp:Button ID="submitButton" runat="server" Text="Ingresar &raquo;" OnClick="Submit_Click" />--%>
         </div>
     </div>
 </asp:Content>

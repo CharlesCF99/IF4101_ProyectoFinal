@@ -60,5 +60,5 @@
             <asp:Button ID="submitButton" runat="server" Text="Modificar &raquo;" OnClick="Modify_Click" />
         </div>
     </div>
-
+    </div>
 </asp:Content>

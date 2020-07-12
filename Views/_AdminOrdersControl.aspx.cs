@@ -12,11 +12,9 @@ namespace IF4101_ProyectoFinal.Views
         public List<string> menu = new List<string> { };
         protected void Page_Load(object sender, EventArgs e)
         {
-            ClientList.Items.Insert(0, new ListItem("--Select--", "0"));
-
             String temp = "";
 
-            if (Session["client"] == "")
+            if (Session["client"] == null)
             {
                 Session["client"] = "";
                 Session["initialDate"] = "";
@@ -37,22 +35,23 @@ namespace IF4101_ProyectoFinal.Views
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            String orderStates = "";
-
-            for (int i = 0; i < StatesList.Items.Count; i++)
+            if (ClientList.SelectedValue == "" || StatesList.SelectedValue == "")
             {
-                if (StatesList.Items[i].Selected == true)
-                {
-                    orderStates += StatesList.Items[i].Text + "|";
-                }
+                Response.Write("<script>alert('Debe llenar al menos un espacio');</script>");
             }
+            else if (InitialDate.Text == "" && EndDate.Text == "")
+            {
+                Response.Write("<script>alert('Debe llenar ambos espacios para las fechas');</script>");
+            }
+            else
+            {
+                Session["client"] = "$1" + ClientList.SelectedValue;
+                Session["initialDate"] = "$2_" + InitialDate.Text;
+                Session["endDate"] = "$3_" + EndDate.Text;
+                Session["orderStates"] = "$4" + StatesList.SelectedValue;
 
-            Session["client"] = "$1_" + ClientList.SelectedIndex;
-            Session["initialDate"] = "$2_" + InitialDate.Text;
-            Session["endDate"] = "$3_" + EndDate.Text;
-            Session["orderStates"] = "$4_" + orderStates;
-
-            Response.Redirect("/Views/_AdminOrdersControl.aspx");
+                Response.Redirect("/Views/_AdminOrdersControl.aspx");
+            }
         }
     }
 }

@@ -46,11 +46,11 @@ namespace IF4101_ProyectoFinal.Controls
                 Boolean flag1 = false;
                 Boolean flag2 = false;
 
-                if (tempString[1] != "1_")
+                if (tempString[1] != "1")
                 {
                     foreach (var item in data)
                     {
-                        if (item.Split('|')[1].ToString().Contains(tempString[1].Replace("1_", "")))
+                        if (item.Split('|')[1].ToString().Contains(tempString[1].Replace("1", "")))
                         {
                             tempList1.Add(item);
                             flag1 = true;
@@ -91,21 +91,13 @@ namespace IF4101_ProyectoFinal.Controls
                     }
                 }
 
-                if (tempString[4] != "4_")
+                if (tempString[4] != "4")
                 {
-                    String[] temp2 = tempString[1].Replace("4_", "").Split('|');
-                    foreach (var item in data)
+                    foreach (var item in tempList2)
                     {
-                        foreach (var item2 in temp2)
+                        if (item.Split('|')[3].ToString().Contains(tempString[4].Replace("4", "")))
                         {
-                            if (item.Contains(item2))
-                            {
-                                if (flag2)
-                                {
-
-                                }
-                                result.Add(item);
-                            }
+                            result.Add(item);
                         }
                     }
                 }

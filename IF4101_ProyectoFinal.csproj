@@ -525,6 +525,8 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DisableUser.cs" />
+    <Compile Include="Controls\GetUser.cs" />
     <Compile Include="Controls\ModifyUserControl.cs" />
     <Compile Include="Controls\Encryption.cs" />
     <Compile Include="Controls\GetAdminMenu.cs" />

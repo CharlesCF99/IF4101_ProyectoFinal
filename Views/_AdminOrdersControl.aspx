@@ -57,9 +57,9 @@
                         <%foreach (var item in menu)
                             {%>
                         <tr class="pointer" onclick="rowEvent(this)">
-                            <td><%=item.Split('|')[1].ToString() %></td>
-                            <td><%=item.Split('|')[2].ToString() %></td>
-                            <td><%=item.Split('|')[3].ToString() %></td>
+                            <td style="height: 36px"><%=item.Split('|')[1].ToString() %></td>
+                            <td style="height: 36px"><%=item.Split('|')[2].ToString() %></td>
+                            <td style="height: 36px"><%=item.Split('|')[3].ToString() %></td>
                             <%--<td>
                                 <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
                             </td>--%>
@@ -74,9 +74,11 @@
                 <h3>¿Desea filtrar los resultados?</h3>
                 <h4>Por cliente: </h4>
                 <p>
-                    <asp:DropDownList ID="ClientList" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name">
+                    <asp:DropDownList ID="ClientList" runat="server" DataSourceID="ClientNames" DataTextField="PartyName" DataValueField="PartyName">
+                        <asp:ListItem Text="Seleccione un nombre" Value="0">
+                        </asp:ListItem>
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionDB %>" SelectCommand="SELECT [Name], [LastName], [SecondLastName] FROM [Party]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="ClientNames" runat="server" ConnectionString="<%$ ConnectionStrings:4101_ProyectoFinalConnectionString1 %>" SelectCommand="A_GET_ALL_USERS" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                 </p>
                 <h4>En un rango de fechas: </h4>
                 <h5>Fecha inicial:</h5>

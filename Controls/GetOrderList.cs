@@ -17,6 +17,9 @@ namespace IF4101_ProyectoFinal.Controls
             string status = "";
             string name = "";
             var data = new List<string>();
+            var tempList1 = new List<string>();
+            var tempList2 = new List<string>();
+            var result = new List<string>();
 
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionDB"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
@@ -39,14 +42,79 @@ namespace IF4101_ProyectoFinal.Controls
 
             if (filterSettings != "")
             {
-                String[] temp = filterSettings.Split('$');
+                String[] tempString = filterSettings.Split('$');
+                Boolean flag1 = false;
+                Boolean flag2 = false;
 
-               if (temp[1] != "$1_")
+                if (tempString[1] != "1_")
                 {
+                    foreach (var item in data)
+                    {
+                        if (item.Split('|')[1].ToString().Contains(tempString[1].Replace("1_", "")))
+                        {
+                            tempList1.Add(item);
+                            flag1 = true;
+                        }
+                    }
+                }
 
+                if (tempString[2] != "2_")
+                {
+                    if (flag1)
+                    {
+                        foreach (var item in tempList1)
+                        {
+                            DateTime initialDate = DateTime.Parse(tempString[2].Replace("2_", ""));
+                            DateTime endDate = DateTime.Parse(tempString[3].Replace("3_", ""));
+                            DateTime tempDate = DateTime.Parse(item.Split('|')[2].ToString());
+
+                            if (initialDate <= tempDate && tempDate <= endDate)
+                            {
+                                tempList2.Add(item);
+                                flag2 = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var item in data)
+                        {
+                            DateTime initialDate = DateTime.Parse(tempString[2].Replace("2_", ""));
+                            DateTime endDate = DateTime.Parse(tempString[3].Replace("3_", ""));
+                            DateTime tempDate = DateTime.Parse(item.Split('|')[2].ToString());
+
+                            if (initialDate <= tempDate && tempDate <= endDate)
+                            {
+                                tempList2.Add(item);
+                            }
+                        }
+                    }
+                }
+
+                if (tempString[4] != "4_")
+                {
+                    String[] temp2 = tempString[1].Replace("4_", "").Split('|');
+                    foreach (var item in data)
+                    {
+                        foreach (var item2 in temp2)
+                        {
+                            if (item.Contains(item2))
+                            {
+                                if (flag2)
+                                {
+
+                                }
+                                result.Add(item);
+                            }
+                        }
+                    }
                 }
             }
-            return data;
+            else
+            {
+                result = data;
+            }
+            return result;
         }
     }
 }

@@ -37,7 +37,7 @@ namespace IF4101_ProyectoFinal.Controls
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     connection.Close();
-                    ID = Convert.ToInt32(cmd.Parameters["@ID"].Value); 
+                    ID = Convert.ToInt32(cmd.Parameters["@ID"].Value);
                 }
                 catch (Exception ex)
                 {
@@ -47,14 +47,13 @@ namespace IF4101_ProyectoFinal.Controls
                 {
                     connection.Close();
                 }
-               
+
             }
             return ID;
         }
 
-    public int saveToDB(String fullName, String lastName, String secondLastName, String email, String adress, String firstPassword)
+        public int saveToDB(String fullName, String lastName, String secondLastName, String email, String adress, String firstPassword)
         {
-            int ID = 0;
             string strcon = ConfigurationManager.ConnectionStrings["ConnectionDB"].ConnectionString;
             SqlConnection con = new SqlConnection(strcon);
             using (SqlCommand cmd = new SqlCommand("A_ADD_USER", con))

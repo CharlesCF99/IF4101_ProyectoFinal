@@ -14,8 +14,14 @@ namespace IF4101_ProyectoFinal.Views
     {
         public List<string> activeOrders = new List<string> { };
         ManageOrders aOrders = new ManageOrders();
+        public int ordenesOcultas = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (aOrders.GetActiveOrdersList().Count > 6)
+            {
+                ordenesOcultas = aOrders.GetActiveOrdersList().Count - 6;
+            }
+
             if (Request.QueryString["id"] == null)
             {
                 activeOrders = new List<string> { };

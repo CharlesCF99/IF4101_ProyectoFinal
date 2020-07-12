@@ -36,13 +36,13 @@
      </div>
 
      <div align="justify">
-                    <h4>Ingrese la descripcion del plato<font color="red">*</font></h4>
+                    <h4>Ingrese la descripción del plato<font color="red">*</font></h4>
                     <asp:TextBox ID="DescPlate" runat="server" Width="200px" placeholder="Ej: Describir el plato como tal"></asp:TextBox>
      </div>
 
     <div align="justify">
                     <h4>Ingrese el precio del plato<font color="red">*</font></h4>
-                    <asp:TextBox ID="PricePlate" runat="server" Width="200px" placeholder="Ej: 2000"></asp:TextBox>
+                    <asp:TextBox ID="PricePlate" runat="server" Width="200px" placeholder="Ej: 2000" TextMode="Number"></asp:TextBox>
      </div>
 
 

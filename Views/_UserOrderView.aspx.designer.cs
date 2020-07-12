@@ -11,7 +11,7 @@ namespace IF4101_ProyectoFinal.Views
 {
 
 
-    public partial class _UserMainView
+    public partial class _UserOrderView
     {
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ page title="" language="C#" masterpagefile="~/Site.Master" autoeventwireup="true" codebehind="_UserOrderView.aspx.cs" inherits="IF4101_ProyectoFinal.Views._UserMainView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="_UserOrderView.aspx.cs" Inherits="IF4101_ProyectoFinal.Views._UserOrderView" %>
 
 <asp:Content ID="GeneralNavBar" ContentPlaceHolderID="NavBar" runat="server">
     <div class="row navbar navbar-inverse navbar-static-top">
@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" runat="server" href="/Views/_UserMainView"">Restaurante</a>
+            <a class="navbar-brand" runat="server" href="~/">Restaurante</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -29,13 +29,22 @@
                 <table class="table table-hover" id="myTable">
                     <thead class="thead-dark">
                         <tr class="header">
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Total</th>
                         </tr>
                     </thead>
                     <tbody>
-                       <tr>
+                        <% foreach (var item in orders)
+                            {%>
+                        <tr class="pointer">
+                            <td><%=item.Split('|')[0].ToString() %></td>
+                            <td><%=item.Split('|')[1].ToString() %></td>
+                            <td><%=item.Split('|')[2].ToString() %></td>
+                            <td><%=item.Split('|')[3].ToString() %></td>
                         </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </div>

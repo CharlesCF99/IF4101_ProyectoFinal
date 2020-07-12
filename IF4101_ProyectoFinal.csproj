@@ -494,6 +494,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\SignUp.aspx" />
+    <Content Include="Views\LoadPlateView.aspx" />
     <Content Include="Views\_ModifyUserView.aspx" />
     <Content Include="Views\_AdminEditPlateView.aspx" />
     <Content Include="Views\_AdminMainView.aspx" />
@@ -525,6 +526,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\A_ADD_PLATE.cs" />
     <Compile Include="Controls\LoadPlateControl.cs" />
     <Compile Include="Controls\ModifyUserControl.cs" />
     <Compile Include="Controls\Encryption.cs" />
@@ -575,6 +577,13 @@
     </Compile>
     <Compile Include="Views\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoadPlateView.aspx.cs">
+      <DependentUpon>LoadPlateView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoadPlateView.aspx.designer.cs">
+      <DependentUpon>LoadPlateView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\_ModifyUserView.aspx.cs">
       <DependentUpon>_ModifyUserView.aspx</DependentUpon>

@@ -22,7 +22,7 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="container-bg col-md-8 col-md-offset-2 border">
+  <div class="container-bg col-md-8 col-md-offset-2 border">
         <h1 align="justify">Modificar Datos</h1>
         <div classname="row">
             <div classname="col-md-4">

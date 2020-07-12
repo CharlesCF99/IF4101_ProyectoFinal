@@ -11,6 +11,7 @@ namespace IF4101_ProyectoFinal.Controls
         public List<string> GetActiveOrdersList()
         {
             int ID = 0;
+            String temp = "";
             string name = "";
             string orderDescription = "";
             var data = new List<string>();

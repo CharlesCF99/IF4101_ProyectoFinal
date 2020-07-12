@@ -115,6 +115,7 @@
     <Content Include=".vs\IF4101_ProyectoFinal\config\applicationhost.config" />
     <Content Include=".vs\slnx.sqlite" />
     <Content Include=".vs\VSWorkspaceState.json" />
+    <Content Include="About.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
@@ -173,6 +174,7 @@
     <Content Include="bin\System.Web.Optimization.dll" />
     <Content Include="bin\System.Web.Optimization.xml" />
     <Content Include="bin\WebGrease.dll" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -509,9 +511,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controls\A_ADD_PLATE.cs" />
-    <Compile Include="Controls\LoadPlateControl.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ModifyUserControl.cs" />
     <Compile Include="Controls\Encryption.cs" />
     <Compile Include="Controls\GetAdminMenu.cs" />

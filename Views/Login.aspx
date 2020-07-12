@@ -15,7 +15,6 @@
                 <li><a runat="server" href="~/">Inicio</a></li>
                 <li><a runat="server" href="~/Views/Login">Ingresar</a></li>
                 <li><a runat="server" href="~/Views/SignUp">Registrarse</a></li>
-                <li><a runat="server" href="~/Contact">Contacto</a></li>
             </ul>
         </div>
     </div>

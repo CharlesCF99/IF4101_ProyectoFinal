@@ -57,7 +57,7 @@
         </div>
         <div classname="row">
             <h4></h4>
-            <asp:Button ID="submitButton" runat="server" Text="Registrarse &raquo;" OnClick="Modify_Click" />
+            <asp:Button ID="submitButton" runat="server" Text="Modificar &raquo;" OnClick="Modify_Click" />
         </div>
     </div>
 

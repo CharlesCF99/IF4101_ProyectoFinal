@@ -42,13 +42,13 @@ namespace IF4101_ProyectoFinal.Views
         protected global::System.Web.UI.WebControls.TextBox PricePlate;
 
         /// <summary>
-        /// Status control.
+        /// plateStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Status;
+        protected global::System.Web.UI.WebControls.RadioButtonList plateStatus;
 
         /// <summary>
         /// Photo control.

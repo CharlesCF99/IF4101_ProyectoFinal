@@ -10,7 +10,7 @@ namespace IF4101_ProyectoFinal.Controls
 {
     public class GetOrderList
     {
-        public List<string> GetOrdersList()
+        public List<string> GetOrdersList(String filterSettings)
         {
             int ID = 0;
             DateTime date = new DateTime();
@@ -36,6 +36,16 @@ namespace IF4101_ProyectoFinal.Controls
                 data.Add(ID + "|" + name + "|" + date + "|" + status + "|");
             }
             connection.Close();
+
+            if (filterSettings != "")
+            {
+                String[] temp = filterSettings.Split('$');
+
+               if (temp[1] != "$1_")
+                {
+
+                }
+            }
             return data;
         }
     }

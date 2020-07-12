@@ -53,7 +53,7 @@
 
     <div align="justify">
                     <h4>Foto de la vara <font color="red">*</font></h4>
-                    <asp:TextBox ID="Photo" runat="server" Width="200px" placeholder="Ej: xvxv"></asp:TextBox>
+                    <asp:TextBox ID="Photo" runat="server" Width="200px" placeholder="Ej: xvxv" OnTextChanged="Photo_TextChanged"></asp:TextBox>
      </div>
 
      <div classname="row">

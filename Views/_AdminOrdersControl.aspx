@@ -70,7 +70,40 @@
             </div>
         </div>
         <div classname="row">
-            <h4></h4>
+            <div style="text-align: justify; table-layout: auto;">
+                <h3>¿Desea filtrar los resultados?</h3>
+                <h4>Por cliente: </h4>
+                <p>
+                    <asp:DropDownList ID="ClientList" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionDB %>" SelectCommand="SELECT [Name], [LastName], [SecondLastName] FROM [Party]"></asp:SqlDataSource>
+                </p>
+                <h4>En un rango de fechas: </h4>
+                <h5>Fecha inicial:</h5>
+                <p>
+                    <asp:TextBox ID="InitialDate" runat="server" TextMode="Date"></asp:TextBox>
+                </p>
+                <h5>Fecha final:</h5>
+                <p>
+                    <asp:TextBox ID="EndDate" runat="server" TextMode="Date"></asp:TextBox>
+                </p>
+                <h4>Por estado: </h4>
+                <p>
+                    <asp:CheckBoxList ID="StatesList" runat="server" DataSourceID="OrdersStates" DataTextField="OrderStatusDescription" DataValueField="OrderStatusDescription" CellPadding="1" CellSpacing="1">
+                        <asp:ListItem>A Tiempo</asp:ListItem>
+                        <asp:ListItem>Sobre Tiempo</asp:ListItem>
+                        <asp:ListItem>Demorado</asp:ListItem>
+                        <asp:ListItem>Anulado</asp:ListItem>
+                        <asp:ListItem>Entregado</asp:ListItem>
+                    </asp:CheckBoxList>
+                </p>
+                <p>
+                    <asp:SqlDataSource ID="OrdersStates" runat="server" ConnectionString="<%$ ConnectionStrings:4101_ProyectoFinalConnectionString1 %>" SelectCommand="SELECT [OrderStatusDescription] FROM [OrderStatus]"></asp:SqlDataSource>
+                </p>
+                <p>
+                    <asp:Button ID="FilterButton" runat="server" OnClick="Button1_Click" Text="Filtrar" />
+                </p>
+            </div>
             <%--<asp:Button ID="submitButton" runat="server" Text="Ingresar &raquo;" OnClick="Submit_Click" />--%>
         </div>
     </div>

@@ -1,4 +1,5 @@
 ﻿using System;
+using IF4101_ProyectoFinal.Controls;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ namespace IF4101_ProyectoFinal.Views
         protected void Add_Click(object sender, EventArgs e)
         {
             GetPlate addPlate = new GetPlate();
-            addPlate.GetPlateAdmin(NamePlate.Text, DescPlate.Text, Int32.Parse(PricePlate.Text), "Test6",, Int32.Parse(Status.Text));
+            addPlate.GetPlateAdmin(NamePlate.Text, DescPlate.Text, Int32.Parse(PricePlate.Text), "Test6", Int32.Parse(Status.Text));
             Response.Redirect("../Views/_AdminMainView.aspx");
         }
     }

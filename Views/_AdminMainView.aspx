@@ -16,6 +16,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administrar <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/Views/_AdminMainView.aspx">Platos</a></li>
+                        <li><a href="/Views/LoadPlateView.aspx">Añadir plato</a></li>
                         <li><a href="/Views/_AdminUserControlView.aspx">Usuarios</a></li>
                         <li><a href="/Views/_AdminOrdersControl.aspx">Pedidos</a></li>
                         <li><a href="/Views/_AdminOrderStatus.aspx">Estados</a></li>

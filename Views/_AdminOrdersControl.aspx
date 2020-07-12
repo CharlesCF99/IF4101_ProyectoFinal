@@ -70,16 +70,12 @@
             </div>
         </div>
         <div classname="row">
-            <div style="text-align: justify; table-layout: auto;">
+            <div style="text-align: justify;">
                 <h3>¿Desea filtrar los resultados?</h3>
                 <h4>Por cliente: </h4>
-                <p>
-                    <asp:DropDownList ID="ClientList" runat="server" DataSourceID="ClientNames" DataTextField="PartyName" DataValueField="PartyName">
-                        <asp:ListItem Text="Seleccione un nombre" Value="0">
-                        </asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:SqlDataSource ID="ClientNames" runat="server" ConnectionString="<%$ ConnectionStrings:4101_ProyectoFinalConnectionString1 %>" SelectCommand="A_GET_ALL_USERS" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-                </p>
+                <asp:RadioButtonList ID="ClientList" runat="server" DataSourceID="ClientNames" DataTextField="PartyName" DataValueField="PartyName">
+                </asp:RadioButtonList>
+                <asp:SqlDataSource ID="ClientNames" runat="server" ConnectionString="<%$ ConnectionStrings:4101_ProyectoFinalConnectionString1 %>" SelectCommand="A_GET_ALL_USERS" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                 <h4>En un rango de fechas: </h4>
                 <h5>Fecha inicial:</h5>
                 <p>
@@ -91,16 +87,9 @@
                 </p>
                 <h4>Por estado: </h4>
                 <p>
-                    <asp:CheckBoxList ID="StatesList" runat="server" DataSourceID="OrdersStates" DataTextField="OrderStatusDescription" DataValueField="OrderStatusDescription" CellPadding="1" CellSpacing="1">
-                        <asp:ListItem>A Tiempo</asp:ListItem>
-                        <asp:ListItem>Sobre Tiempo</asp:ListItem>
-                        <asp:ListItem>Demorado</asp:ListItem>
-                        <asp:ListItem>Anulado</asp:ListItem>
-                        <asp:ListItem>Entregado</asp:ListItem>
-                    </asp:CheckBoxList>
-                </p>
-                <p>
-                    <asp:SqlDataSource ID="OrdersStates" runat="server" ConnectionString="<%$ ConnectionStrings:4101_ProyectoFinalConnectionString1 %>" SelectCommand="SELECT [OrderStatusDescription] FROM [OrderStatus]"></asp:SqlDataSource>
+                    <asp:RadioButtonList ID="StatesList" runat="server" DataSourceID="OrderStatus" DataTextField="OrderStatusDescription" DataValueField="OrderStatusDescription">
+                    </asp:RadioButtonList>
+                    <asp:SqlDataSource ID="OrderStatus" runat="server" ConnectionString="<%$ ConnectionStrings:4101_ProyectoFinalConnectionString1 %>" SelectCommand="SELECT [OrderStatusDescription] FROM [OrderStatus]"></asp:SqlDataSource>
                 </p>
                 <p>
                     <asp:Button ID="FilterButton" runat="server" OnClick="Button1_Click" Text="Filtrar" />
